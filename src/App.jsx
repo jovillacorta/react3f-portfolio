@@ -1,21 +1,22 @@
-import { useState } from 'react'
+import { Component, useState } from 'react'
 import './App.css'
-import { OrbitControls } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import Experience from './components/experience'
 
-export default function App() {
-  const [count, setCount] = useState(0)
+function App() {
+  
 
   return (
-    <>
-    <OrbitControls makeDefault />
-        
-        <mesh>
-            <boxGeometry />
-            <meshNormalMaterial />
-        </mesh>
-
-    </>
+    <Canvas camera={ {
+        fov: 45,
+        near: 0.1,
+        far: 2000,
+        position: [ -3, 1.5, 4 ]
+    } }
+    >
+    <Experience />
+    </Canvas>
   )
 }
 
-
+export default App

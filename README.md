@@ -1,1 +1,1 @@
-# Laptop Portfolio using React 3fiber
+# Jo's Laptop - A React3Fiber Portfolio

@@ -1,4 +1,4 @@
-import { Component, useState } from 'react'
+import { Component, Suspense, useState } from 'react'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
 import Experience from './components/experience'
@@ -11,10 +11,13 @@ function App() {
         fov: 45,
         near: 0.1,
         far: 2000,
-        position: [ -3, 1.5, 4 ]
+        position: [ -10, 7, 12 ]
     } }
     >
+    <Suspense fallback = { null }>
     <Experience />
+    </Suspense>
+
     </Canvas>
   )
 }

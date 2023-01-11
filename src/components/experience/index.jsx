@@ -1,10 +1,9 @@
 
 import { Html, Environment, Float, PresentationControls, ContactShadows, Text } from '@react-three/drei'
 import { useControls } from 'leva';
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useGLTF } from '@react-three/drei';
 import * as THREE from "three"
-import { useLayoutEffect, useRef } from 'react'
 
 
 
@@ -26,7 +25,8 @@ export default function Experience()
     }, [])
 
     const pA = useControls('SCREEN', options)
-
+    const [hovered, hover] = useState(false)
+    console.log(hovered)
 
     return <>
 
@@ -69,16 +69,19 @@ export default function Experience()
             >
 
                 <mesh position= {[pA.x, pA.y, pA.z]}
-                castShadow receiveShadow>
+                castShadow receiveShadow
+                onPointerOver={()=> hover(true)}
+                onPointerOut={()=> hover(false)}>
+
                 <planeGeometry args={[pA.planex, pA.planey]} />
                 <meshPhysicalMaterial roughness={0.0} blending={THREE.NoBlending} opacity={0.1} color={0x0303030}  />
                     <Html 
                         prepend
                         transform
                         wrapperClass='htmlScreen'
-                        zIndexRange={[0,0]}
+                        zIndexRange={hovered ? [5555,5555] : [0,0]}
                         distanceFactor={pA.distance}
-                        >
+                    >
                         <iframe src="https://bruno-simon.com/html/" />
                     </Html>
                 </mesh>

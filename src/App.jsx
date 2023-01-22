@@ -2,6 +2,7 @@ import { Component, Suspense, useRef, useLayoutEffect} from 'react'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
 import Experience from './components/experience'
+import { Stars } from '@react-three/drei'
 
 function App() {
   
@@ -22,9 +23,15 @@ function App() {
         position: [ -10, 7, 12 ]
     } }
     >
+      <Stars radius={50} depth={10}/>
       <Suspense fallback = { null }>
+      
+      
+
       <Experience />
       
+      
+
       </Suspense>
 
     </Canvas>

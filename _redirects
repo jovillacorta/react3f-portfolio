@@ -1,1 +1,1 @@
-/an-html-site           https://an-html-portofolio.netlify.app/:splat   200
+/an-html-site/*           https://an-html-portofolio.netlify.app/:splat   200

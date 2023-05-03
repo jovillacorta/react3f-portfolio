@@ -23,7 +23,7 @@ function App() {
         position: [ -10, 7, 12 ]
     } }
     >
-      <Stars radius={50} depth={10}/>
+      <Stars radius={100} depth={10}/>
       <Suspense fallback = { null }>
       
       

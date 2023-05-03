@@ -9,11 +9,13 @@ body,
     height: 100%;
     /* background: linear-gradient(180deg, #232140 0%, #2D395E 32.81%, #33708E 63.02%, #6DBFBD 81.77%, #f6bdd1 100%); */
     /* background: linear-gradient(180deg, #6DBFBD 15.1%, #F6BDD1 61.46%, #F5F0C5 100%); */
-    background: linear-gradient(180deg, #33708E 0%, #6DBFBD 17.71%, #6DBFBD 32.81%, #F6BDD1 75.52%, #F5F0C5 100%);
+    /* background: linear-gradient(180deg, #33708E 0%, #6DBFBD 17.71%, #6DBFBD 32.81%, #F6BDD1 75.52%, #F5F0C5 100%); */
+    background: linear-gradient(180deg, #26153D 0%, #2D2D45 81.25%, #28363D 100%)
 }
 canvas
 {
     touch-action: none;
+    position: relative;
 }
 
 .htmlScreen iframe{
